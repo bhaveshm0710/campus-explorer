@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="navbar">
+    <a class="logo" href="#home">&gt;_ campus.explorer</a>
+    <nav aria-label="Main navigation">
+      <a href="#clubs">Clubs</a>
+      <a href="#events">Events</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <canvas id="web" aria-hidden="true"></canvas>
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="label">sample project · fictional data</p>
+        <h1 aria-label="Your campus, unlocked.">
+          <span class="decode" data-text="Your campus,">Your campus,</span><br>
+          <span class="decode accent" data-text="unlocked.">unlocked.</span>
+        </h1>
+        <p class="hero-text">Discover clubs, catch upcoming events and find the resources that make student life easier.</p>
+        <a class="button" href="#clubs">Explore clubs</a>
+        <ul class="stats" aria-label="Quick facts">
+          <li><strong data-count="6">6</strong> clubs</li>
+          <li><strong data-count="3">3</strong> events</li>
+          <li><strong data-count="4">4</strong> resources</li>
+        </ul>
+        <p class="hint">Move your cursor. The web follows.</p>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Code</span><span>Design</span><span>Robotics</span><span>Music</span><span>Sports</span>
+        <span>Code</span><span>Design</span><span>Robotics</span><span>Music</span><span>Sports</span>
+      </div>
+      <div class="marquee-track reverse">
+        <span>Events</span><span>Clubs</span><span>Resources</span><span>Hackathons</span><span>Meetups</span>
+        <span>Events</span><span>Clubs</span><span>Resources</span><span>Hackathons</span><span>Meetups</span>
+      </div>
+    </div>
+
+    <section class="container" id="clubs">
+      <h2><span>//</span> Clubs</h2>
+      <p class="note">Sample data: every club, event and resource on this page is fictional, not official college information.</p>
+      <div class="controls">
+        <label class="visually-hidden" for="search">Search clubs</label>
+        <input type="search" id="search" placeholder="Search by name or description...">
+        <div class="filters" role="group" aria-label="Filter clubs by category">
+          <button class="filter active" data-category="All" aria-pressed="true">All</button>
+          <button class="filter" data-category="Tech" aria-pressed="false">Tech</button>
+          <button class="filter" data-category="Creative" aria-pressed="false">Creative</button>
+          <button class="filter" data-category="Sports" aria-pressed="false">Sports</button>
+        </div>
+      </div>
+      <p class="results" id="club-count" aria-live="polite"></p>
+      <div class="grid" id="club-list"></div>
+    </section>
+
+    <section class="container" id="events">
+      <h2><span>//</span> Events</h2>
+      <div class="timeline">
+        <article class="event">
+          <p class="meta">14 Nov · Saturday · 10:00 AM</p>
+          <h3><span aria-hidden="true">💻</span> Hack the Campus</h3>
+          <button class="details-btn" aria-expanded="false">Show details</button>
+          <p class="details" hidden>A beginner-friendly 6-hour hackathon. Form teams of 3-4 and bring your laptop. Venue: Lab 3 (sample).</p>
+        </article>
+        <article class="event">
+          <p class="meta">20 Nov · Friday · 6:00 PM</p>
+          <h3><span aria-hidden="true">🎤</span> Open Mic Night</h3>
+          <button class="details-btn" aria-expanded="false">Show details</button>
+          <p class="details" hidden>Music, poetry and stand-up. Sign up on the day or just come to watch. Venue: Main Auditorium (sample).</p>
+        </article>
+        <article class="event">
+          <p class="meta">29 Nov · Sunday · 6:30 AM</p>
+          <h3><span aria-hidden="true">🏃</span> Sunrise 5K Run</h3>
+          <button class="details-btn" aria-expanded="false">Show details</button>
+          <p class="details" hidden>A relaxed group run around campus. All paces welcome, and water is provided. Meet at the main gate (sample).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="resources">
+      <h2><span>//</span> Resources</h2>
+      <ul class="resources">
+        <li><span class="icon" aria-hidden="true">📚</span><div><strong>Library</strong>Open 8 AM to 8 PM on weekdays (sample)</div></li>
+        <li><span class="icon" aria-hidden="true">📝</span><div><strong>Study Notes</strong>Shared notes folder for each semester (sample)</div></li>
+        <li><span class="icon" aria-hidden="true">💼</span><div><strong>Career Cell</strong>Resume reviews every Thursday (sample)</div></li>
+        <li><span class="icon" aria-hidden="true">🛟</span><div><strong>Help Desk</strong>Ask about ID cards, fees and forms (sample)</div></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for the GDG Web Development pre-interview. Sample data only.</p>
+  </footer>
+</body>
+</html>
